@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+
+
+{% include 'partials/nav.html' %}
+
+<main>
+    <div class="input_cep">
+        <label for="id">CEP:</label>
+        <input type="text" id="cep">
+        <button onclick="endereco()">Buscar</button>    
+    </div>
+    <br>
+    <br>
+    <div class="response">
+        <div class="input">
+            <label for="logradouro">Logradouro:</label>
+            <input type="text" id="logradouro" disabled>
+        </div>
+
+        <div class="input">
+            <label for="bairro">Bairro:</label>
+            <input type="text" id="bairro" disabled>
+        </div>
+
+        <div class="input">
+            <label for="localidade">Localidade:</label>
+            <input type="text" id="localidade" disabled>
+        </div>
+
+        <div class="input">
+            <label for="uf">UF:</label>
+            <input type="text" id="uf" disabled>
+        </div>
+    </div>
+</main>
+
+{% include 'partials/footer.html' %}
+
+
+{% endblock %}
